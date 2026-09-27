@@ -1,3 +1,5 @@
+import { ansattedata } from "./ansatte.js"
+
 const minEl = document.querySelector("#min")
 const maxEl = document.querySelector("#max")
 const btnEl = document.querySelector("#btn")
@@ -22,7 +24,9 @@ class Ansatt {
   }
 }
 
-let ansatte = []
+const ansatte = ansattedata.map(
+  (ans) => new Ansatt(ans.name, ans.start, ans.end, ans.hasImage),
+)
 
 function getRange() {
   const min = Number(minEl.value)
