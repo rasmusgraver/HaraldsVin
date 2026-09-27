@@ -1,41 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Haralds vintrekking</title>
 
-    <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Haralds vintrekking</h1>
 
     <div id="container">
-        <div id="top">
-            <img src="./bilder/Harald_bibliotek.jpg" id="bilde1" class="Harald" alt="Bilde av Harald">
+      <div id="top">
+        <img
+          src="./bilder/Harald_bibliotek.jpg"
+          id="bilde1"
+          class="Harald"
+          alt="Bilde av Harald"
+        />
 
-            <div id="topNumber">
-                0
-            </div>
+        <div id="topNumber">0</div>
+      </div>
+      <div id="bottom">
+        <div class="bottom_left">
+          <p>Minimum:</p>
+          <input type="number" id="min" min="0" value="1" />
         </div>
-        <div id="bottom">
-            <div class="bottom_left">
-                <p>Minimum:</p>
-                <input type="number" id="min" min="0" value="1">
-            </div>
-            <div class="bottom_middle">
-                <p>Maximum:</p>
-                <input type="number" id="max" value="300">
-            </div>
-            <div class="bottom_right">
-                <button id="btn" onClick='tilfeldigTrekk()'>Trekk!</button>
-            </div>
+        <div class="bottom_middle">
+          <p>Maximum:</p>
+          <input type="number" id="max" value="300" />
         </div>
+        <div class="bottom_right">
+          <button id="btn" onClick="tilfeldigTrekk()">Trekk!</button>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -4,151 +4,148 @@ https://www.sv.no/ressursbanken/grafisk-og-sosiale-medier/grafisk-profil/
 */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
-    font-size: 70px;
-    margin-bottom: 20px;
-    text-align: center;
+  font-size: 70px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .smallerText {
-    font-size: 50px;
+  font-size: 50px;
 }
 
-
-input, button {
-    width: 100%;
-    font-size: 40px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 7px;
+input,
+button {
+  width: 100%;
+  font-size: 40px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 7px;
 }
 
 button {
-    height: 100%;
-    width: 200px;
-    /* padding: top right bottom left */
-    /* padding: 10px 40px 10px 40px; */
-    padding: 10px;
-    background-color: #539760;
-    /* background-color: #EB4040; */
-    cursor: pointer;
+  height: 100%;
+  width: 200px;
+  /* padding: top right bottom left */
+  /* padding: 10px 40px 10px 40px; */
+  padding: 10px;
+  background-color: #539760;
+  /* background-color: #EB4040; */
+  cursor: pointer;
 }
 
 button.trukket {
-    background-color: #EB4040;
+  background-color: #eb4040;
 }
-
 
 /* With flexbox */
 #container {
-    /* border: 1px solid #000; */
-    width: 95%;
-    max-width: 1000px;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
+  /* border: 1px solid #000; */
+  width: 95%;
+  max-width: 1000px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
 }
 
-
 #top {
-    /* margin: 50px; */
-    font-size: 120px;
-    /* font-size: 10vw; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-grow: 1;
-    position: relative;
+  /* margin: 50px; */
+  font-size: 120px;
+  /* font-size: 10vw; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+  position: relative;
 }
 
 #navn {
-    font-size: 45px;
+  font-size: 45px;
 }
 
 .Harald {
-    position: absolute;
-    height: 95%;
-    z-index: -1;
+  position: absolute;
+  height: 95%;
+  z-index: -1;
 }
 
 .Harald.zoom {
-    /* transition: height 5s ease-in; */
-    /* transition: height 4s cubic-bezier(1, .19, .97, .72); */
-    /* transition: height 4s cubic-bezier(1, .1, .97, .7); */
-    transition: height 4s cubic-bezier(1, .1, .97   , .5);
+  /* transition: height 5s ease-in; */
+  /* transition: height 4s cubic-bezier(1, .19, .97, .72); */
+  /* transition: height 4s cubic-bezier(1, .1, .97, .7); */
+  transition: height 4s cubic-bezier(1, 0.1, 0.97, 0.5);
 }
 
 #topNumber {
-    position: relative;
-    z-index: -2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #topNumber p {
-    margin: 0;
+  margin: 0;
 }
 
 #topNumber img {
-    width: 150px;
-    border-radius: 10px;
-    margin: 10px;
+  width: 150px;
+  border-radius: 10px;
+  margin: 10px;
 }
 
 #bottom {
-    font-size: 30px;
-    border-top: 1px solid #000;
-    text-align: center;
-    /* flex-grow: 0; */
-    display: flex;
-    background-color: #000;
-    color: #fff;
+  font-size: 30px;
+  border-top: 1px solid #000;
+  text-align: center;
+  /* flex-grow: 0; */
+  display: flex;
+  background-color: #000;
+  color: #fff;
 }
 
-#bottom>div {
-    /* margin: 0px 10px 10px 10px; */
-    margin: 10px;
+#bottom > div {
+  /* margin: 0px 10px 10px 10px; */
+  margin: 10px;
 }
 
 #bottom p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-
 @media (max-width: 650px) {
-    h1 {
-        font-size: 50px;
-    }
+  h1 {
+    font-size: 50px;
+  }
 
-    #top {
-        font-size: 70px;
-    }
-    
-    #top p {
-        font-size: 45px;
-    }
+  #top {
+    font-size: 70px;
+  }
 
-    #bottom {
-        flex-direction: column;
-    }
+  #top p {
+    font-size: 45px;
+  }
 
-    button {
-        width: 100%;
-    }
+  #bottom {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
 }
