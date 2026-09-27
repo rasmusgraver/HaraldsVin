@@ -32,10 +32,14 @@ function getRange() {
     return { min: 0, max: 0, valid: false }
   }
 
-  const safeMin = Math.max(0, Math.min(min, max))
-  const safeMax = Math.max(0, Math.max(min, max))
+  if (min > max) {
+    return { min: 0, max: 0, valid: false }
+  }
 
-  return { min: safeMin, max: safeMax, valid: safeMin <= safeMax }
+  const safeMin = Math.max(0, min)
+  const safeMax = Math.max(0, max)
+
+  return { min: safeMin, max: safeMax, valid: true }
 }
 
 function setHarald() {
