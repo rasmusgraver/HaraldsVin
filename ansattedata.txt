@@ -1,0 +1,173 @@
+
+1	Asbjørn		34	Kirsti	
+2	Asbjørn		35	Kirsti	
+3	Asbjørn		36	Kirsti	
+4	Asbjørn		37	Mari K	
+5	Asbjørn		38	Mari K	
+6	Asbjørn		39	Mari K	
+7	Asbjørn		40	Mari K	
+8	Asbjørn		41	Mari K	
+9	Asbjørn		42	Mari K	
+10	Asbjørn		43	Isabelle	
+11	Asbjørn		44	Isabelle	
+12	Asbjørn		45	Isabelle	
+13	Tore		46	Isabelle	
+14	Tore		47	Isabelle	
+13	Tore		48	Kristin	
+16	Tore		49	Kristin	
+17	Tore		50	Kristin	
+18	Tore		51	Kristin	
+19	Tore		52	Kristin	
+20	Tore		53	Kristin	
+21	Tore		54	Kristin	
+22	Tore		55	Kristin	
+23	Tore		56	Kristin	
+24	Tore		57	Kristin	
+25	Terese		58	Kristin	
+26	Terese		59	Kristin	
+27	Terese		60	Kirsti	
+28	Terese		61	Kirsti	
+29	Terese		62	Kirsti	
+30	Terese		63	Kirsti	
+31	Kirsti		64	Kirsti	
+32	Kirsti		65	Kirsti	
+33	Kirsti		66	Mari KK	
+67	Mari KK		113	Mira	
+68	Mari KK		114	Mira	
+69	Mari KK		115	Mari KK	
+70	Thomas vaktmester		116	Mari KK	
+71	Thomas vaktmester		117	Mari KK	
+72	Thomas vaktmester		118	Mari KK	
+73	Thomas vaktmester		119	Mari KK	
+74	Thomas vaktmester		120	Mari KK	
+75	Thomas vaktmester		121	Marita	
+76	Thomas vaktmester		122	Marita	
+77	Thomas vaktmester		123	Marita	
+78	Thomas vaktmester		124	Marita	
+79	Thomas vaktmester		125	Marita	
+80	Thomas vaktmester		126	Marita	
+81	Thomas vaktmester		127	Marita	
+82	Mari KK		128	Marita	
+83	Mari KK		129	Marita	
+84	Mari KK		130	Marita	
+85	Harald		131	Marita	
+86	Harald		132	Marita	
+87	Harald		133	Turid	
+88	Harald		134	Turid	
+89	Harald		135	Turid	
+90	Harald		136	Turid	
+91	Harald		137	Turid	
+92	Harald		138	Turid	
+93	Harald		139	Turid	
+94	Harald		140	Turid	
+95	Harald		141	Turid	
+96	Harald		142	Turid	
+97	Otto A		143	Turid	
+98	Otto A		144	Turid	
+99	Otto A		145	Mari KK	
+100	Otto A		146	Mari KK	
+101	Otto A		147	Mari KK	
+102	Otto A		148	Mari KK	
+103	Otto A		149	Mari KK	
+104	Otto A		150	Vegar P	
+105	Otto A		151	Vegar P	
+106	Otto A		152	Vegar P	
+107	Otto A		153	Vegar P	
+108	Otto A		154	Vegar P	
+109	Mira		155	Vegar P	
+110	Mira		156	Vegar P	
+111	Mira		157	Vegar P	
+112	Mira		158	Vegar P	
+159	Vegar P		205	Åsne	
+160	Vegar P		206	Åsne	
+161	Vegar P		207	Åsne	
+162	Tore		208	Åsne	
+163	Tore		209	Åsne	
+164	Tore		210	Hilde	
+165	Tore		211	Hilde	
+166	Tore		212	Hilde	
+167	Tore		213	Hilde	
+168	Tore		214	Hilde	
+169	Tore		215	Isabelle	
+170	Tore		216	Isabelle	
+171	Tore		217	Isabelle	
+172	Tore		218	Isabelle	
+173	Tore		219	Isabelle	
+174	Vegar K		220	Isabelle	
+175	Vegar K		221	Isabelle	
+176	Vegar K		222	Terese	
+177	Vegar K		223	Terese	
+178	Vegar K		224	Terese	
+179	Vegar K		225	Terese	
+180	Mira		226	Terese	
+181	Mira		227	Terese	
+182	Mira		228	Mari K	
+183	Mira		229	Mari K	
+184	Mira		230	Mari K	
+185	Mira		231	Mari K	
+186	Svein		232	Mari K	
+187	Svein		233	Mari K	
+188	Svein		234	Marit	
+189	Svein		235	Marit	
+190	Svein		236	Marit	
+191	Svein		237	Marit	
+192	Svein		238	Marit	
+193	Svein		239	Marit	
+194	Svein		240	Vegar K	
+195	Svein		241	Vegar K	
+196	Svein		242	Vegar K	
+197	Svein		243	Vegar K	
+198	Åsne		244	Vegar K	
+199	Åsne		245	Vegar K	
+200	Åsne		246	Mari KK	
+201	Åsne		247	Mari KK	
+202	Åsne		248	Mari KK	
+203	Åsne		249	Mari KK	
+204	Åsne		250	Mari KK	
+251	Mari KK		298	Trude	
+252			299	Trude	
+253			300	Heidi	
+254			301	Heidi	
+255			302	Heidi	
+256			303	Heidi	
+257			304	Heidi	
+258			305	Heidi	
+259			306	Trude	
+260			307	Trude	
+261			308	Trude	
+262			309	Trude	
+263	Live		310	Trude	
+264	Live		311	Trude	
+265	Live		312	Tobias	
+266	Live		 
+267	Live		 
+268	Live		 
+269	Live		 
+270	Live		 
+271	Live		 
+272	Live		 
+273	Live		 
+274	Live		 
+
+276	Tobias		
+277	Tobias		
+278	Tobias		
+279	Tobias		
+281	Tobias		
+282	Tobias		
+283	Tobias		
+284	Tobias		
+285	Tobias		
+286	Tobias		
+287	Tobias		
+288	Heidi		
+289	Heidi		
+290	Heidi		
+291	Heidi		
+292	Heidi		
+293	Heidi		
+294	Trude		
+295	Trude		
+296	Trude		
+297	Trude		
+
