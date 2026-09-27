@@ -5,6 +5,7 @@ const maxEl = document.querySelector("#max")
 const btnEl = document.querySelector("#btn")
 const HaraldEl = document.querySelector(".Harald")
 const topNumberEl = document.querySelector("#topNumber")
+let resultTimeoutId = null
 
 function nArray(low, high) {
   const numbers = []
@@ -101,6 +102,10 @@ function tilfeldigTrekk() {
   btnEl.classList.toggle("trukket")
 
   if (btnEl.classList.contains("trukket")) {
+    if (resultTimeoutId) {
+      clearTimeout(resultTimeoutId)
+    }
+
     audio.load()
     audio.play()
 
@@ -117,29 +122,38 @@ function tilfeldigTrekk() {
 
     HaraldEl.classList.toggle("zoom")
     HaraldEl.style.height = "0"
+    topNumberEl.innerText = ""
+    topNumberEl.style.fontSize = "120px"
 
-    topNumberEl.innerHTML = `<p>${tilfeldig}</p>`
+    resultTimeoutId = window.setTimeout(() => {
+      topNumberEl.innerHTML = `<p>${tilfeldig}</p>`
 
-    if (navn !== "") {
-      topNumberEl.innerHTML += `<p id="navn">(${navn})</p>`
+      if (navn !== "") {
+        topNumberEl.innerHTML += `<p id="navn">(${navn})</p>`
 
-      if (harBilde) {
-        topNumberEl.innerHTML += `<img src="./bilder/ansatte/${navn}.jpg" alt="${navn}">`
+        if (harBilde) {
+          topNumberEl.innerHTML += `<img src="./bilder/ansatte/${navn}.jpg" alt="${navn}">`
+        }
+
+        topNumberEl.style.fontSize = "80px"
+      } else {
+        topNumberEl.style.fontSize = "120px"
+        topNumberEl.innerHTML += `<p class="smallerText">(sjekk lista)</p>`
       }
-
-      topNumberEl.style.fontSize = "80px"
-    } else {
-      topNumberEl.style.fontSize = "120px"
-      topNumberEl.innerHTML += `<p class="smallerText">(sjekk lista)</p>`
-    }
+    }, 4000)
 
     btnEl.innerText = "Igjen?"
   } else {
+    if (resultTimeoutId) {
+      clearTimeout(resultTimeoutId)
+      resultTimeoutId = null
+    }
+
     btnEl.innerText = "Trekk!"
 
     HaraldEl.classList.toggle("zoom")
     HaraldEl.style.height = "92%"
-    topNumberEl.innerText = "0"
+    topNumberEl.innerText = ""
     topNumberEl.style.fontSize = "120px"
   }
 }
