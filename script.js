@@ -1,4 +1,4 @@
-import { ansattedata } from "./ansatte.js"
+import { ansattedata } from "./ansattedata.js"
 
 const minEl = document.querySelector("#min")
 const maxEl = document.querySelector("#max")
