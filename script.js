@@ -1,23 +1,19 @@
-// Lager variabler basert på DOM
 const minEl = document.querySelector("#min")
 const maxEl = document.querySelector("#max")
-const topEl = document.querySelector("#top")
 const btnEl = document.querySelector("#btn")
 const HaraldEl = document.querySelector(".Harald")
+const topNumberEl = document.querySelector("#topNumber")
 
-// Lager et array med heltall fra og med low til og med high
 function nArray(low, high) {
-  let i = low
-  arr = [i]
-  while (i < high) {
-    i++
-    arr.push(i)
+  const numbers = []
+
+  for (let i = low; i <= high; i++) {
+    numbers.push(i)
   }
 
-  return arr
+  return numbers
 }
 
-// Ansatt klasse
 class Ansatt {
   constructor(name, low, high, hasImage = false) {
     this.name = name
@@ -26,12 +22,21 @@ class Ansatt {
   }
 }
 
-// Lager objekter av de ansatte, og legger i et array
 let ansatte = []
 
-// Velger hvilket bilde av Harald som skal brukes basert på vindusbredde
-window.addEventListener("resize", setHarald)
-window.addEventListener("load", setHarald)
+function getRange() {
+  const min = Number(minEl.value)
+  const max = Number(maxEl.value)
+
+  if (!Number.isFinite(min) || !Number.isFinite(max)) {
+    return { min: 0, max: 0, valid: false }
+  }
+
+  const safeMin = Math.max(0, Math.min(min, max))
+  const safeMax = Math.max(0, Math.max(min, max))
+
+  return { min: safeMin, max: safeMax, valid: safeMin <= safeMax }
+}
 
 function setHarald() {
   if (window.innerWidth <= 650) {
@@ -43,56 +48,58 @@ function setHarald() {
   }
 }
 
-topNumberEl = document.querySelector("#topNumber")
+window.addEventListener("resize", setHarald)
+window.addEventListener("load", setHarald)
 
-// Lyd
-let audio = new Audio("drumroll_tada.mp3")
+const audio = new Audio("drumroll_tada.mp3")
 audio.load()
 
-// Lager et tilfeldig heltall fra og med min til og med max
 function tilfeldigTall(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-// Tester funksjonen som trekker tilfeldige tall
 function testTilfeldig() {
-  let min = Number(minEl.value)
-  let max = Number(maxEl.value)
+  const { min, max, valid } = getRange()
 
-  let l = max - min + 1
+  if (!valid) {
+    console.warn("Ugyldig intervall")
+    return
+  }
 
-  tallArr = new Array(l).fill(0)
-
-  let n = 10000000
+  const total = max - min + 1
+  const tallArr = new Array(total).fill(0)
+  const n = 10000000
 
   for (let i = 0; i < n; i++) {
-    tall = tilfeldigTall(min, max)
-    tallArr[tall - 1] += 1
+    const tall = tilfeldigTall(min, max)
+    tallArr[tall - min] += 1
   }
 
-  for (let i = 0; i < l; i++) {
-    console.log(`${i + 1}: ${(tallArr[i] * 100) / n} %`)
+  for (let i = 0; i < total; i++) {
+    console.log(`${min + i}: ${(tallArr[i] * 100) / n} %`)
   }
-
-  //console.log(tallArr)
 }
 
 // Bør gi lik sannsynlighet for alle tall
-//testTilfeldig()
+// testTilfeldig()
 
-// Trekker ansatt
 function tilfeldigTrekk() {
-  audio.load()
-  let min = Number(minEl.value)
-  let max = Number(maxEl.value)
+  const { min, max, valid } = getRange()
+
+  if (!valid) {
+    return
+  }
 
   btnEl.classList.toggle("trukket")
 
   if (btnEl.classList.contains("trukket")) {
+    audio.load()
     audio.play()
-    let tilfeldig = tilfeldigTall(min, max)
+
+    const tilfeldig = tilfeldigTall(min, max)
     let navn = ""
     let harBilde = false
+
     ansatte.forEach((ansatt) => {
       if (ansatt.numbers.includes(tilfeldig)) {
         navn = ansatt.name
@@ -105,7 +112,7 @@ function tilfeldigTrekk() {
 
     topNumberEl.innerHTML = `<p>${tilfeldig}</p>`
 
-    if (navn != "") {
+    if (navn !== "") {
       topNumberEl.innerHTML += `<p id="navn">(${navn})</p>`
 
       if (harBilde) {
@@ -123,7 +130,10 @@ function tilfeldigTrekk() {
     btnEl.innerText = "Trekk!"
 
     HaraldEl.classList.toggle("zoom")
-    HaraldEl.style.height = "95%"
+    HaraldEl.style.height = "92%"
     topNumberEl.innerText = "0"
+    topNumberEl.style.fontSize = "120px"
   }
 }
+
+btnEl.addEventListener("click", tilfeldigTrekk)
