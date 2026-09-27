@@ -1,3 +1,8 @@
+// Lagt opp som intervall-data i samme stil som fasiten i ansattedata.txt.
+// Tomme tall i datasettet: 252-262, 275 og 280.
+// Fasiten ligger i ansattedata.txt. Denne filen er normalisert til intervall-data,
+// slik at appen kan sjekke om et tilfeldig tall matcher et navn.
+// Tomme tall: 252-262, 275, 280.
 export const ansattedata = [
   {
     name: "Asbjørn",
