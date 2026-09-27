@@ -8,12 +8,6 @@ export const ansattedata = [
   {
     name: "Tore",
     start: 13,
-    end: 14,
-    hasImage: false,
-  },
-  {
-    name: "Tore",
-    start: 16,
     end: 24,
     hasImage: false,
   },
