@@ -67,31 +67,6 @@ function tilfeldigTall(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-function testTilfeldig() {
-  const { min, max, valid } = getRange()
-
-  if (!valid) {
-    console.warn("Ugyldig intervall")
-    return
-  }
-
-  const total = max - min + 1
-  const tallArr = new Array(total).fill(0)
-  const n = 10000000
-
-  for (let i = 0; i < n; i++) {
-    const tall = tilfeldigTall(min, max)
-    tallArr[tall - min] += 1
-  }
-
-  for (let i = 0; i < total; i++) {
-    console.log(`${min + i}: ${(tallArr[i] * 100) / n} %`)
-  }
-}
-
-// Bør gi lik sannsynlighet for alle tall
-// testTilfeldig()
-
 function tilfeldigTrekk() {
   const { min, max, valid } = getRange()
 
