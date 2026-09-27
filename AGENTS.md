@@ -19,5 +19,8 @@ Dersom vi "traff et hull" i ansattedata.js så viser vi bare vinnertallet uten n
 Så er det opp til brukeren av web-appen om det skal trekkes igjen, eller om det kanskje er
 kommet nye spillere på listen (som er en fysisk liste) som har vunnet, som ikke web-appen
 vet om enda.
+Ansattedata finnes i to versjoner: En txt fil som er "fasiten" vi har fått
+fra Harald (som arrangerer vin-trekningen), og en js versjon som er den vi bruker
+i web-appen. Disse to filene skal matche 100%.
 MERK: Mari K og Mari KK er to ulike personer!
 MERK: Tomme tall (uten person) 252-262, 275, 280.
