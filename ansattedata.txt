@@ -124,21 +124,11 @@
 202	Åsne		248	Mari KK	
 203	Åsne		249	Mari KK	
 204	Åsne		250	Mari KK	
-251	Mari KK		298	Trude	
-252			299	Trude	
-253			300	Heidi	
-254			301	Heidi	
-255			302	Heidi	
-256			303	Heidi	
-257			304	Heidi	
-258			305	Heidi	
-259			306	Trude	
-260			307	Trude	
-261			308	Trude	
-262			309	Trude	
-263	Live		310	Trude	
-264	Live		311	Trude	
-265	Live		312	Tobias	
+251	Mari KK		
+
+263	Live			
+264	Live			
+265	Live			
 266	Live		 
 267	Live		 
 268	Live		 
@@ -148,6 +138,32 @@
 272	Live		 
 273	Live		 
 274	Live		 
+
+288	Heidi		
+289	Heidi		
+290	Heidi		
+291	Heidi		
+292	Heidi		
+293	Heidi		
+294	Trude		
+295	Trude		
+296	Trude		
+297	Trude		
+298	Trude	
+299	Trude	
+300	Heidi	
+301	Heidi	
+302	Heidi	
+303	Heidi	
+304	Heidi	
+305	Heidi	
+306	Trude	
+307	Trude	
+308	Trude	
+309	Trude
+310	Trude
+311	Trude
+
 
 276	Tobias		
 277	Tobias		
@@ -160,14 +176,8 @@
 285	Tobias		
 286	Tobias		
 287	Tobias		
-288	Heidi		
-289	Heidi		
-290	Heidi		
-291	Heidi		
-292	Heidi		
-293	Heidi		
-294	Trude		
-295	Trude		
-296	Trude		
-297	Trude		
+
+
+312	Tobias
+
 
