@@ -19,3 +19,5 @@ Dersom vi "traff et hull" i ansattedata.js så viser vi bare vinnertallet uten n
 Så er det opp til brukeren av web-appen om det skal trekkes igjen, eller om det kanskje er
 kommet nye spillere på listen (som er en fysisk liste) som har vunnet, som ikke web-appen
 vet om enda.
+MERK: Mari K og Mari KK er to ulike personer!
+MERK: Tomme tall (uten person) 252-262, 275, 280.
