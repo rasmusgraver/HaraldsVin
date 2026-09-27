@@ -95,8 +95,11 @@ function tilfeldigTrekk() {
       }
     })
 
-    HaraldEl.classList.toggle("zoom")
+    HaraldEl.classList.remove("is-falling")
+    void HaraldEl.offsetWidth
+    HaraldEl.classList.add("is-falling")
     HaraldEl.style.height = "0"
+    topNumberEl.classList.remove("result-visible")
     topNumberEl.innerText = ""
     topNumberEl.style.fontSize = "120px"
 
@@ -115,7 +118,9 @@ function tilfeldigTrekk() {
         topNumberEl.style.fontSize = "120px"
         topNumberEl.innerHTML += `<p class="smallerText">(sjekk lista)</p>`
       }
-    }, 4000)
+
+      topNumberEl.classList.add("result-visible")
+    }, 5000)
 
     btnEl.innerText = "Igjen?"
   } else {
@@ -126,8 +131,9 @@ function tilfeldigTrekk() {
 
     btnEl.innerText = "Trekk!"
 
-    HaraldEl.classList.toggle("zoom")
+    HaraldEl.classList.remove("is-falling")
     HaraldEl.style.height = "92%"
+    topNumberEl.classList.remove("result-visible")
     topNumberEl.innerText = ""
     topNumberEl.style.fontSize = "120px"
   }

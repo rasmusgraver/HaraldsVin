@@ -84,7 +84,17 @@ h1 {
   font-size: 120px;
   font-weight: 700;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-  transition: font-size 0.2s ease;
+  opacity: 0;
+  transform: translateY(28px) scale(0.75);
+  transition:
+    opacity 0.45s ease,
+    transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1),
+    font-size 0.2s ease;
+}
+
+#topNumber.result-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 #topNumber p {
@@ -103,16 +113,23 @@ h1 {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   height: 92%;
   opacity: 0.92;
   z-index: 0;
   pointer-events: none;
   object-fit: cover;
+  transition:
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1.1s ease,
+    filter 1.1s ease,
+    height 1.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.Harald.zoom {
-  transition: height 4s cubic-bezier(1, 0.1, 0.97, 0.5);
+.Harald.is-falling {
+  transform: translate(-50%, 18%) scale(0.8) rotate(4deg);
+  opacity: 0;
+  filter: blur(4px);
 }
 
 #topNumber img {
