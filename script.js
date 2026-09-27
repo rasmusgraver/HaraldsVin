@@ -120,7 +120,7 @@ function tilfeldigTrekk() {
       }
 
       topNumberEl.classList.add("result-visible")
-    }, 5000)
+    }, 3750)
 
     btnEl.innerText = "Igjen?"
   } else {
