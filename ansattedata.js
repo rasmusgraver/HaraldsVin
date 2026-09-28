@@ -116,7 +116,7 @@ export const ansattedata = [
     name: "Harald",
     start: 85,
     end: 96,
-    hasImage: false,
+    hasImage: true,
   },
   {
     name: "Otto A",
