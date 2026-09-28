@@ -36,5 +36,3 @@ MERK: Tomme tall (uten person) 252-262, 275, 280.
   `www` kan pekes med CNAME → `rasmusgraver.github.io`.
 - **HTTPS:** GitHub Pages utsteder automatisk sertifikat (Let's Encrypt) for custom domain.
   `https_enforced` er på.
-- **Feilsøk:** lokale DNS-cacher (router/ISP) kan henge etter når DNS endres — sjekk med
-  `dig haraldsvin.no @1.1.1.1`, eller åpne siden på mobilnett (wifi av).
