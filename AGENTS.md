@@ -24,3 +24,17 @@ fra Harald (som arrangerer vin-trekningen), og en js versjon som er den vi bruke
 i web-appen. Disse to filene skal matche 100%.
 MERK: Mari K og Mari KK er to ulike personer!
 MERK: Tomme tall (uten person) 252-262, 275, 280.
+
+## Server / publisering
+
+- Siden er ren statisk HTML/CSS/JS og hostes på **GitHub Pages** (gratis). Repoet er public.
+- **Deploy:** automatisk fra `main` (repo-rot) ved hver push. Bygg tar ~1 minutt.
+- **Live-URL:** https://haraldsvin.no (fallback: https://rasmusgraver.github.io/HaraldsVin/).
+- **Custom domain** settes via `CNAME`-fil i repo-rot med innhold `haraldsvin.no`.
+- **DNS** (hos registrar, f.eks. Domeneshop): A-records for `haraldsvin.no` →
+  185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 (GitHubs Pages-IP-er).
+  `www` kan pekes med CNAME → `rasmusgraver.github.io`.
+- **HTTPS:** GitHub Pages utsteder automatisk sertifikat (Let's Encrypt) for custom domain.
+  `https_enforced` er på.
+- **Feilsøk:** lokale DNS-cacher (router/ISP) kan henge etter når DNS endres — sjekk med
+  `dig haraldsvin.no @1.1.1.1`, eller åpne siden på mobilnett (wifi av).
