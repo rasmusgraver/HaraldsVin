@@ -1,4 +1,4 @@
-# Haralds vintrekning - fasit over tall -> person (normalisert)
+# Haralds vintrekning - liste over tall -> person
 # Format: <fra>-<til> <navn>  (en linje per sammenhengende serie)
 # Tomme tall (uten person): 252-262, 275, 280
 
