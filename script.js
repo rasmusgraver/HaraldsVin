@@ -67,6 +67,75 @@ function tilfeldigTall(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+function finnPerson(tall) {
+  for (const ansatt of ansatte) {
+    if (ansatt.numbers.includes(tall)) {
+      return ansatt
+    }
+  }
+
+  return null
+}
+
+/*
+Vinnere per dag. Siden er ren statisk HTML/JS på GitHub Pages, kan vi ikke
+skrive til en fil på disk. Vi bruker derfor localStorage, som er nettleserens
+«lokale fil»: den holder seg til og med neste dag, på samme maskin/nettleser.
+Format: { dato: "YYYY-MM-DD", vinnere: [navn, ...] }
+*/
+const STORAGE_KEY = "haraldsvin.vinnere"
+
+function dagensDato() {
+  const d = new Date()
+  const mnd = String(d.getMonth() + 1).padStart(2, "0")
+  const dag = String(d.getDate()).padStart(2, "0")
+
+  return `${d.getFullYear()}-${mnd}-${dag}`
+}
+
+function lesVinnere() {
+  const dato = dagensDato()
+
+  try {
+    const lagret = JSON.parse(localStorage.getItem(STORAGE_KEY))
+
+    if (lagret && lagret.dato === dato && Array.isArray(lagret.vinnere)) {
+      return { dato, vinnere: lagret.vinnere }
+    }
+  } catch {
+    /* korrupt eller utilgjengelig lagring -> start på nytt */
+  }
+
+  return { dato, vinnere: [] }
+}
+
+function lagreVinnere(data) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
+  } catch {
+    /* lagring utilgjengelig (f.eks. privat modus) -> trekningen virker likevel */
+  }
+}
+
+/*
+Trekker et tall, og trekker på nytt dersom tallet tilhører en person som
+allerede har vunnet i dag. Tall uten person («hull») er alltid greie.
+*/
+function trekkVinner(min, max, vinnere) {
+  const maksForsok = 500
+  let tall = tilfeldigTall(min, max)
+  let person = finnPerson(tall)
+  let forsok = 0
+
+  while (person && vinnere.includes(person.name) && forsok < maksForsok) {
+    tall = tilfeldigTall(min, max)
+    person = finnPerson(tall)
+    forsok++
+  }
+
+  return { tall, person }
+}
+
 function tilfeldigTrekk() {
   const { min, max, valid } = getRange()
 
@@ -84,16 +153,20 @@ function tilfeldigTrekk() {
     audio.load()
     audio.play()
 
-    const tilfeldig = tilfeldigTall(min, max)
+    const vinnerData = lesVinnere()
+    const { tall: tilfeldig, person } = trekkVinner(min, max, vinnerData.vinnere)
     let navn = ""
     let harBilde = false
 
-    ansatte.forEach((ansatt) => {
-      if (ansatt.numbers.includes(tilfeldig)) {
-        navn = ansatt.name
-        harBilde = ansatt.hasImage
+    if (person) {
+      navn = person.name
+      harBilde = person.hasImage
+
+      if (!vinnerData.vinnere.includes(navn)) {
+        vinnerData.vinnere.push(navn)
+        lagreVinnere(vinnerData)
       }
-    })
+    }
 
     HaraldEl.classList.remove("is-falling")
     void HaraldEl.offsetWidth

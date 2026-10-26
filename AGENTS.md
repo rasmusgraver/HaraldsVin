@@ -25,6 +25,19 @@ i web-appen. Disse to filene skal matche 100%.
 MERK: Mari K og Mari KK er to ulike personer!
 MERK: Tomme tall (uten person) 252-262, 275, 280.
 
+## Én vinner per person per dag
+
+Samme person skal ikke kunne vinne to ganger samme dag. Siden er ren statisk
+HTML/JS på GitHub Pages og kan ikke skrive til en fil på disk, så «den lokale
+fila» er implementert med `localStorage` i `script.js`:
+
+- Nøkkel: `haraldsvin.vinnere`. Format: `{ dato: "YYYY-MM-DD", vinnere: [navn, ...] }`.
+- Ved trekning: hvis lagret dato er dagens dato beholdes lista, og det trekkes
+  på nytt dersom tallet tilhører en person som allerede har vunnet i dag.
+  Tall uten person («hull») er alltid greie og blokkeres ikke.
+- Hvis lagret dato er en annen dag: lista nullstilles og dagens dato + vinner skrives.
+- Lagring er per nettleser/maskin. Byttes nettleser, eller dataene ryddes, starter lista på nytt.
+
 ## Server / publisering
 
 - Siden er ren statisk HTML/CSS/JS og hostes på **GitHub Pages** (gratis). Repoet er public.
