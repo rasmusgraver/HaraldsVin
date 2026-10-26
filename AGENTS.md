@@ -10,6 +10,11 @@ Haralds vintrekking — en enkel nettside som trekker et tilfeldig tal (vinflask
 - Siden skal kun brukes på PC / stor skjerm. Ikke fokuser på mobil eller responsivt design.
 - Det skal ikke være noen funksjonalitet for historikk / tidligere trekninger.
 
+## Bevisste valg (ikke gjør om)
+
+- **Animasjonen skal alltid vises.** Harald som zoomer/faller ved hver trekning er en del av opplevelsen. Vi støtter bevisst **ikke** `prefers-reduced-motion` — det ble forsøkt og rullet tilbake 2026-10-26. Én bruker, og vi vil ikke gjøre siden mer komplisert enn den trenger å være.
+- **`X-UA-Compatible`-metaen er fjernet** fra `index.html`. Det var et utdatert IE-direktiv som moderne nettlesere ignorerer. Ikke legg den tilbake.
+
 ## Ansatte-data
 
 Logikken i nummer-trekkingen er litt rar: Vi skal bare trekke et tilfeldig tall mellom min og maks
