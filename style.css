@@ -207,3 +207,19 @@ input:focus-visible {
 button.trukket {
   background-color: var(--red);
 }
+
+/*
+Brukere som har slått på «reduser bevegelse» i operativsystemet (tilgjengelighet,
+f.eks. ved bevegelsessensitivitet) får animasjonene fjernet. Uten dette valget
+ser siden helt lik ut som før.
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

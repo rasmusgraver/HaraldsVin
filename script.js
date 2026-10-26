@@ -5,6 +5,7 @@ const maxEl = document.querySelector("#max")
 const btnEl = document.querySelector("#btn")
 const HaraldEl = document.querySelector(".Harald")
 const topNumberEl = document.querySelector("#topNumber")
+const reduserBevegelse = window.matchMedia("(prefers-reduced-motion: reduce)")
 let resultTimeoutId = null
 
 function nArray(low, high) {
@@ -176,6 +177,9 @@ function tilfeldigTrekk() {
     topNumberEl.innerText = ""
     topNumberEl.style.fontSize = "120px"
 
+    /* Ved «reduser bevegelse» er animasjonen borte, så vi viser resultatet med en gang */
+    const visningsForsinkelse = reduserBevegelse.matches ? 200 : 3750
+
     resultTimeoutId = window.setTimeout(() => {
       topNumberEl.innerHTML = `<p>${tilfeldig}</p>`
 
@@ -193,7 +197,7 @@ function tilfeldigTrekk() {
       }
 
       topNumberEl.classList.add("result-visible")
-    }, 3750)
+    }, visningsForsinkelse)
 
     btnEl.innerText = "Igjen?"
   } else {
