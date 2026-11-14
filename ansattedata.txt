@@ -1,6 +1,6 @@
 # Haralds vintrekning - liste over tall -> person
 # Format: <fra>-<til> <navn>  (en linje per sammenhengende serie)
-# Tomme tall (uten person): 252-262, 275, 280
+# Tomme tall (uten person): 252-262, 275, 280, 313-331
 
 1-12 Asbjørn
 13-24 Tore
@@ -41,3 +41,4 @@
 300-305 Heidi
 306-311 Trude
 312 Tobias
+332-343 Ingrid F

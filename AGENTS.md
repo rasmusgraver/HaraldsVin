@@ -28,7 +28,7 @@ Ansattedata finnes i to versjoner: En txt fil som er "fasiten" vi har fått
 fra Harald (som arrangerer vin-trekningen), og en js versjon som er den vi bruker
 i web-appen. Disse to filene skal matche 100%.
 MERK: Mari K og Mari KK er to ulike personer!
-MERK: Tomme tall (uten person) 252-262, 275, 280.
+MERK: Tomme tall (uten person) 252-262, 275, 280, 313-331.
 
 ## Én vinner per person per dag
 
